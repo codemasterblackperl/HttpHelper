@@ -61,7 +61,7 @@ namespace HttpHelper
             return await response.Content.ReadAsStringAsync();
         }
 
-        async public Task<string> PostAsync(string url,FormUrlEncodedContent content)
+        async public Task<string> PostAsync(string url,HttpContent content)
         {
             var resp = await _client.PostAsync(url, content);
             resp.EnsureSuccessStatusCode();
